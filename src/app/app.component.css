@@ -1,0 +1,11 @@
+app-navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.ss{
+  position: relative;
+  top: 100px;
+  margin-top: 10vh !important;
+}

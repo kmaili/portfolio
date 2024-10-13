@@ -1,0 +1,17 @@
+.card-text{
+  font-family: URW Chancery L, cursive;
+  font-weight: bold;
+  text-decoration: 3px underline;
+  text-underline-offset: 20%;
+}
+.card{
+  transition: transform 1s ease-out;
+  border: 5px solid blueviolet;
+}
+.card:hover{
+  transform: scale(1.1);
+  border: 5px solid brown;
+}
+.card:not(:hover){
+  transform: scale(1.0);
+}

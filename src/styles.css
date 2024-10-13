@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  background: url("https://img.freepik.com/free-vector/network-connection-background_23-2148879892.jpg?t=st=1728517323~exp=1728520923~hmac=ed85edf3727a60c968106bb85e8fcacfe68b229f3772904be2af72e8b2801719&w=740") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

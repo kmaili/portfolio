@@ -1,0 +1,59 @@
+.social-media i{
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.social-media i:hover{
+  transform: scale(1.5);
+}
+
+li a {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 10px;
+  display: inline-block;
+  transition: transform 0.5s ease-in-out;
+}
+li a:hover {
+  animation: vibrate 1s linear infinite;
+}
+@keyframes vibrate {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-5px); /* Move up */
+  }
+  50% {
+    transform: translateY(0px);  /* Move down */
+  }
+  75% {
+    transform: translateY(-5px); /* Move up */
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+li a::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Start at the center */
+  bottom: 0; /* Position it at the bottom */
+  width: 100%; /* Full width of the link */
+  height: 5px; /* Thickness of the underline */
+  background-color: orangered; /* Color of the underline */
+  transform: translateX(-50%) scaleX(0); /* Center it and hide it */
+  transition: transform 0.3s ease; /* Animation for the transform */
+  transform-origin: center; /* Set transform origin to the center */
+  text-underline-offset: 100%;
+}
+
+li a:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Scale it to full width */
+}
+li a:hover, a:focus{
+  color: white;
+}

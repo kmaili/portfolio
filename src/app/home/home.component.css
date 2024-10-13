@@ -1,0 +1,62 @@
+
+
+
+/* Profile Card  */
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.bg-black {
+  background: #000;
+}
+body {
+  background-color: #eeeeee;
+}
+
+.aboutme-title {
+
+  --border-size: 0.1rem;
+  border: var(--border-size) solid transparent;
+
+  /* Paint an image in the border */
+  border-image: conic-gradient(
+    from var(--angle),
+    blueviolet 0deg 180deg,
+    white 180deg 360deg
+  )
+  1 stretch;
+  background: rgb(255 255 255 / var(--opacity));
+}
+
+@property --opacity {
+  syntax: "<number>";
+  initial-value: 0.5;
+  inherits: false;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes opacityChange {
+  to {
+    --opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.aboutme-title {
+  animation: rotate 4s linear infinite, opacityChange 3s infinite alternate;
+}
+.profile-img{
+  height: 27em;
+}

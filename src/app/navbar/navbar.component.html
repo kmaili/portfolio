@@ -1,0 +1,29 @@
+<nav [class]="getNavBarStyle()">
+  <a class="navbar-brand ms-2" [style]="'color:'+(isScrolled?'black;':'white;')" routerLink="">E-Portfolio</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav menu m-auto gap-5">
+      <li class="nav-item active">
+        <a [class]="getNavBarStyle(true)" routerLink="cv">Resume</a>
+      </li>
+      <li class="nav-item">
+        <a [class]="getNavBarStyle(true)" routerLink="projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a [class]="getNavBarStyle(true)" routerLink="internships">Internships</a>
+      </li>
+      <li class="nav-item">
+        <a [class]="getNavBarStyle(true)" routerLink="contact">Contact</a>
+      </li>
+    </ul>
+    <ul class="social-media navbar-nav m-auto gap-3">
+
+      <span [class]="getNavBarStyle(true, true)" (click)="openNewTab('https://www.facebook.com/aymen.kmaili.1')"><i class="bi-facebook"></i></span>
+      <span [class]="getNavBarStyle(true, true)"><i class="bi-linkedin" (click)="openNewTab('https://www.linkedin.com/in/aymen-kmaili-75851a1bb')"></i></span>
+      <span [class]="getNavBarStyle(true, true)"><i class="bi-github" (click)="openNewTab('https://github.com/kmaili')"></i></span>
+      <span><a href="mailto:kmailiaymen10@gmail.com" [class]="getNavBarStyle(true, true)"><i class="bi-envelope"></i></a></span>
+    </ul>
+  </div>
+</nav>
